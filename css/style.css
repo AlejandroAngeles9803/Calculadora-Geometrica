@@ -14,6 +14,10 @@
 
 .container-main{
     margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    
+    
     padding-top: 3vh;
     background-color: #e6f2ff;
     width: 40vw;
@@ -22,6 +26,9 @@
     border: solid 0.5px #00001a;
 }
 
+.btn-home{
+   padding-left: 27vw;
+}
 .list{
     list-style: none;
     align-content: baseline;
@@ -53,7 +60,11 @@
 }
 
 
-
+.home{
+    width: 5vw;
+    border: none;
+    border-radius: 10px;
+}
 
 
 .logo-equals{

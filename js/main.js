@@ -1,12 +1,11 @@
 
 const esfera = document.querySelector('#esfera');
-const triangle = document.querySelector('#triangulo');   
+const triangle = document.querySelector('#triangulo');
 const rectangle = document.querySelector('#rectangulo');
 
 
-rectangle.addEventListener("click",() => {
+rectangle.addEventListener("click", () => {
     let content = document.querySelector('#content').innerHTML = ""
-    alert("correct");
     let block = document.createElement("div");
     block.insertAdjacentHTML(
         "beforeend",
@@ -33,9 +32,8 @@ rectangle.addEventListener("click",() => {
     document.querySelector('#content').append(block);
 });
 
-triangle.addEventListener("click",() =>{
+triangle.addEventListener("click", () => {
     let content = document.querySelector('#content').innerHTML = ""
-    alert("correct");
     let block = document.createElement("div");
     block.insertAdjacentHTML(
         "beforeend",
@@ -64,7 +62,6 @@ triangle.addEventListener("click",() =>{
 
 esfera.addEventListener("click", () => {
     let content = document.querySelector('#content').innerHTML = ""
-    alert("correct");
     let block = document.createElement("div");
     block.insertAdjacentHTML(
         "beforeend",
@@ -78,7 +75,7 @@ esfera.addEventListener("click", () => {
                 <option value="perimetro">Perimetro</option>
 
             </select>
-            <button  onclick="mostrar()"><i class="bi bi-arrow-right-circle"></i></button>
+            <button  onclick="mostrar()">Save</i></button>
         </div>
         
         <div class="content-load" id="contentInfo">
@@ -99,7 +96,6 @@ const mostrar = () => {
     const index = select.selectedIndex;
     if (index === -1) alert("error");
     const opcionSelected = select.options[index];
-    alert(`Opcion seleccionada: ${opcionSelected.text}. Valor: ${opcionSelected.value}`);
     areaEsfera(opcionSelected.value);
 
 };
@@ -109,22 +105,21 @@ const mostrarTriangulo = () => {
     const index = select.selectedIndex;
     if (index === -1) alert("error");
     const opcionSelected = select.options[index];
-    alert(`Opcion seleccionada: ${opcionSelected.text}. Valor: ${opcionSelected.value}`);
     calculoTriangulo(opcionSelected.value);
 };
 
-mostrarRectangulo = () =>{
+mostrarRectangulo = () => {
     const select = document.querySelector("#miSelect");
     const index = select.selectedIndex;
     if (index === -1) alert("error");
     const opcionSelected = select.options[index];
-    alert(`Opcion seleccionada: ${opcionSelected.text}. Valor: ${opcionSelected.value}`);
+   
     calculoRectangulo(opcionSelected.value);
 };
 
-const calculoRectangulo = (opcion) =>{
-    document.querySelector('#contentInfo').innerHTML = "" ;
-   
+const calculoRectangulo = (opcion) => {
+    document.querySelector('#contentInfo').innerHTML = "";
+
     if (opcion == "area") {
         const content = document.createElement("div");
 
@@ -158,7 +153,7 @@ const calculoRectangulo = (opcion) =>{
 
         document.querySelector('#contentInfo').append(content);
 
-    }else if(opcion == 'perimetro'){
+    } else if (opcion == 'perimetro') {
         const content = document.createElement("div");
 
         content.insertAdjacentHTML(
@@ -189,8 +184,8 @@ const calculoRectangulo = (opcion) =>{
     }
 };
 const calculoTriangulo = (opcion) => {
-    document.querySelector('#contentInfo').innerHTML = "" ;
-   
+    document.querySelector('#contentInfo').innerHTML = "";
+
     if (opcion == "area") {
         const content = document.createElement("div");
 
@@ -224,7 +219,7 @@ const calculoTriangulo = (opcion) => {
 
         document.querySelector('#contentInfo').append(content);
 
-    }else if(opcion == 'perimetro'){
+    } else if (opcion == 'perimetro') {
         const content = document.createElement("div");
 
         content.insertAdjacentHTML(
@@ -267,8 +262,8 @@ const calculoTriangulo = (opcion) => {
 };
 
 const areaEsfera = (opcion) => {
-    document.querySelector('#contentInfo').innerHTML = "" ;
-   
+    document.querySelector('#contentInfo').innerHTML = "";
+
     if (opcion == "area") {
         const content = document.createElement("div");
 
@@ -301,8 +296,8 @@ const areaEsfera = (opcion) => {
         document.querySelector('#contentInfo').append(content);
 
 
-        
-    }else if(opcion == "perimetro"){
+
+    } else if (opcion == "perimetro") {
         const content = document.createElement("div");
 
         content.insertAdjacentHTML(
@@ -333,34 +328,34 @@ const areaEsfera = (opcion) => {
 
         document.querySelector('#contentInfo').append(content);
     }
-    
+
 }
 
-const areaCirculo = () =>{
+const areaCirculo = () => {
     const radio = document.querySelector('#valorRadio').value;
-    const valueResult  = document.querySelector('#result');
+    const valueResult = document.querySelector('#result');
     console.log(radio);
     const PI = 3.1416;
 
     let radioCuadrado = radio * radio;
-    let result =  PI * radioCuadrado;
-    
+    let result = PI * radioCuadrado;
+
     valueResult.value = result;
 
 }
 
 const perimetroCirculo = () => {
     const diametro = document.querySelector('#valorDiametro').value;
-    const valueResult  = document.querySelector('#result');
+    const valueResult = document.querySelector('#result');
     const PI = 3.1416;
-    let result =  PI * diametro;
+    let result = PI * diametro;
     valueResult.value = result;
-} 
+}
 
 const areaTriangulo = () => {
-    const altura  = document.querySelector('#valorAltura').value;
-    const base  = document.querySelector('#valorBase').value;
-    let valueResult  = document.querySelector('#result');
+    const altura = document.querySelector('#valorAltura').value;
+    const base = document.querySelector('#valorBase').value;
+    let valueResult = document.querySelector('#result');
 
     let multiplicacion = base * altura
     let result = multiplicacion / 2;
@@ -372,15 +367,15 @@ const perimetroTriangulo = () => {
     const primer = document.querySelector('#primerLado').value;
     const segundo = document.querySelector('#segundoLado').value;
     const tercer = document.querySelector('#tercerValor').value;
-    let valueResult  = document.querySelector('#result');
+    let valueResult = document.querySelector('#result');
     let result = primer * segundo * tercer
     valueResult.value = result;
 }
 
-const areaRectangulo = () =>{
-    const altura  = document.querySelector('#valorAltura').value;
-    const base  = document.querySelector('#valorBase').value;
-    let valueResult  = document.querySelector('#result');
+const areaRectangulo = () => {
+    const altura = document.querySelector('#valorAltura').value;
+    const base = document.querySelector('#valorBase').value;
+    let valueResult = document.querySelector('#result');
 
     let multiplicacion = base * altura
     valueResult.value = multiplicacion;
@@ -388,8 +383,23 @@ const areaRectangulo = () =>{
 
 const perimetroRectangulo = () => {
     const lados = document.querySelector('#primerLado').value
-    let valueResult  = document.querySelector('#result');
+    let valueResult = document.querySelector('#result');
 
     let multiplicacion = lados * 4
     valueResult.value = multiplicacion;
 }
+
+const home = () => {
+    document.querySelector('#content').innerHTML = "";
+    const content = document.querySelector('#content');
+    
+    content.insertAdjacentHTML(
+
+        'beforeend',
+
+        `
+        <img class="main-image" src="./img/logo.png" alt="">
+        `
+
+    );
+};
