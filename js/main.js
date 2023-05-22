@@ -19,7 +19,7 @@ rectangle.addEventListener("click", () => {
                 <option value="perimetro">Perimetro</option>
 
             </select>
-            <button  onclick="mostrarRectangulo()">Save</button>
+            <button class="btns"  onclick="mostrarRectangulo()">Save</button>
         </div>
         
         <div class="content-load" id="contentInfo">
@@ -47,7 +47,7 @@ triangle.addEventListener("click", () => {
                 <option value="perimetro">Perimetro</option>
 
             </select>
-            <button  onclick="mostrarTriangulo()">Save</button>
+            <button class="btns"  onclick="mostrarTriangulo()">Save</button>
         </div>
         
         <div class="content-load" id="contentInfo">
@@ -75,7 +75,7 @@ esfera.addEventListener("click", () => {
                 <option value="perimetro">Perimetro</option>
 
             </select>
-            <button  onclick="mostrar()">Save</i></button>
+            <button class="btns"  onclick="mostrar()">Save</i></button>
         </div>
         
         <div class="content-load" id="contentInfo">
@@ -137,7 +137,7 @@ const calculoRectangulo = (opcion) => {
                 <span class="input-group-text" id="basic-addon2"><i class="bi bi-align-end"></i></span>
                 
                 <input type="number" class="form-control" id="valorBase" placeholder="Ingresa el valor de la base"  >
-                <button  onclick="areaRectangulo()">Save</button>
+                <button class="btns"  onclick="areaRectangulo()">Save</button>
                 
             </div>
             <div class="content-right">
@@ -163,7 +163,7 @@ const calculoRectangulo = (opcion) => {
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-align-bottom"></i></span>
                 <input type="number" class="form-control" id="primerLado" placeholder="Ingresa el valor de los lados" >
-                <button  onclick="perimetroRectangulo()">Save</button>
+                <button class="btns"  onclick="perimetroRectangulo()">Save</button>
                 
             </div>
 
@@ -203,7 +203,7 @@ const calculoTriangulo = (opcion) => {
                 <span class="input-group-text" id="basic-addon2"><i class="bi bi-align-end"></i></span>
                 
                 <input type="number" class="form-control" id="valorBase" placeholder="Ingresa el valor de la base"  >
-                <button  onclick="areaTriangulo()">Save</button>
+                <button class="btns" onclick="areaTriangulo()">Save</button>
                 
             </div>
             <div class="content-right">
@@ -243,7 +243,7 @@ const calculoTriangulo = (opcion) => {
             <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon2"><i class="bi bi-align-end"></i></span>
             <input type="number" class="form-control" id="tercerValor" placeholder="Ingresa el tercer lado"  >
-            <button  onclick="perimetroTriangulo()">Save</button>
+            <button class="btns"  onclick="perimetroTriangulo()">Save</button>
             
         </div>
             <div class="content-right">
@@ -274,7 +274,7 @@ const areaEsfera = (opcion) => {
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-circle"></i></span>
                 <input type="number" class="form-control" id="valorRadio" placeholder="Ingresa el valor del radio" >
-                <button  onclick="areaCirculo()">Save</button>
+                <button class="btns"  onclick="areaCirculo()">Save</button>
             </div>
 
             <div class="input-group mb-3">
@@ -307,7 +307,7 @@ const areaEsfera = (opcion) => {
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-circle"></i></span>
                 <input type="number" class="form-control" id="valorDiametro" placeholder="Ingresa el valor del diametro" >
-                <button  onclick="perimetroCirculo()">Save</button>
+                <button class="btns" onclick="perimetroCirculo()">Save</button>
             </div>
 
             <div class="input-group mb-3">
